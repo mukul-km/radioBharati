@@ -12,34 +12,39 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>Radio Bharati | Home</title>
   </head>
   <body>
-    <nav>
-      <div class="nav__header">
-        <div class="nav__logo">
-          <a href="#"
-            ><img src="images/nav-logo.png" alt="logo" height="80px"
-          /></a>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="#"
+              ><img src="images/nav-logo.png" alt="logo" height="80px"
+            /></a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
         </div>
-        <div class="nav__menu__btn" id="menu-btn">
-          <i class="ri-menu-line"></i>
-        </div>
-      </div>
-      <ul class="nav__links" id="nav-links">
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">BULLETIN</a></li>
-        <li><a href="#">PROGRAM</a></li>
-        <li><a href="#">CONTACT</a></li>
-        <li><a href="#">LOGIN</a></li>
-      </ul>
-      <div class="nav__btns">
-        <a href="#"><button class="btn">LOGIN</button></a>
-      </div>
-    </nav>
 
-    <section class="hero" id="home">
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">BULLETIN</a></li>
+          <li><a href="#">PROGRAM</a></li>
+          <li><a href="#">CONTACT</a></li>
+          <li><a href="#">LOGIN</a></li>
+        </ul>
+        <div class="nav__btns">
+          <a href="#"><button class="btn">LOGIN</button></a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero__section" id="home">
       <div class="hero__container">
         <div class="hero__content">
           <p>FEEL THE RHYTHM OF RADIO BHARATI</p>
@@ -108,9 +113,7 @@
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
           explicabo doloremque quis ipsum tempore dolorum obcaecati iste
-          distinctio reiciendis, nulla quidem dolore aut aperiam? Laboriosam
-          praesentium odit aperiam cupiditate ipsum excepturi laudantium? Amet,
-          laboriosam sapiente.
+          distinctio reiciendis, nulla quidem dolore aut aperiam?
         </p>
       </div>
     </section>
@@ -118,7 +121,7 @@
     <section class="section__container banner__container">
       <div class="banner__card">
         <h4>10+</h4>
-        <p>Programme</p>
+        <p>program</p>
       </div>
       <div class="banner__card">
         <h4>2K+</h4>
@@ -130,7 +133,7 @@
       </div>
     </section>
 
-    <section class="section__container programme__container">
+    <section class="section__container program__container">
       <h2 class="section__header">Our Most Popular Program</h2>
       <p class="section__description">
         Discover why our listeners rave about our top programs—tune in to
@@ -142,14 +145,14 @@
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div class="swiper-slide">
-            <div class="programme__card">
-              <div class="programme__content">
+            <div class="program__card">
+              <div class="program__content">
                 <img
                   src="https://i.ytimg.com/vi/16DnYSTAEfs/sddefault.jpg"
                   alt=""
                 />
               </div>
-              <div class="programme__details">
+              <div class="program__details">
                 <div>
                   <h4>Saat Rang Pyaar Ke</h4>
                   <h5>Lorem ipsum dolor sit.</h5>
@@ -158,14 +161,14 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="programme__card">
-              <div class="programme__content">
+            <div class="program__card">
+              <div class="program__content">
                 <img
                   src="https://i.ytimg.com/vi/AknZkMdRYC0/sddefault.jpg"
                   alt=""
                 />
               </div>
-              <div class="programme__details">
+              <div class="program__details">
                 <div>
                   <h4>Navkatha</h4>
                   <h5>Lorem ipsum dolor sit amet.</h5>
@@ -174,14 +177,14 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="programme__card">
-              <div class="programme__content">
+            <div class="program__card">
+              <div class="program__content">
                 <img
                   src="https://i.ytimg.com/vi/GHggRuJvD38/sddefault.jpg"
                   alt=""
                 />
               </div>
-              <div class="programme__details">
+              <div class="program__details">
                 <div>
                   <h4>Hassi Ke Phuvaare</h4>
                   <h5>Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
@@ -190,14 +193,14 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="programme__card">
-              <div class="programme__content">
+            <div class="program__card">
+              <div class="program__content">
                 <img
                   src="https://i.ytimg.com/vi/4gmDxHKNNqY/sddefault.jpg"
                   alt=""
                 />
               </div>
-              <div class="programme__details">
+              <div class="program__details">
                 <div>
                   <h4>Kahaniyo ki Dastan</h4>
                   <h5>
@@ -208,6 +211,7 @@
             </div>
           </div>
         </div>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
 
@@ -221,10 +225,18 @@
         <div class="incubation__card">
           <img src="./images/1662622932185.jpeg" alt="" />
           <h4>Bharati News</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-            eos mollitia molestias quo atque!
-          </p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <ul class="incubation__socials">
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-youtube-line"></i></a>
+            </li>
+          </ul>
         </div>
         <div class="incubation__card">
           <img src="" alt="" />
@@ -233,6 +245,17 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
             exercitationem ut eligendi, non ratione porro.
           </p>
+          <ul class="incubation__socials">
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-youtube-line"></i></a>
+            </li>
+          </ul>
         </div>
         <div class="incubation__card">
           <img src="" alt="" />
@@ -241,6 +264,17 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
             sit adipisci asperiores placeat aut maiores labore magni?
           </p>
+          <ul class="incubation__socials">
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-youtube-line"></i></a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -301,7 +335,6 @@
       <div class="footer__bar">Copyright © 2024. All rights reserved.</div>
     </footer>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
   </body>
