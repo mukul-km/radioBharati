@@ -37,6 +37,13 @@ ScrollReveal().reveal(".hero__btns", {
   delay: 1500,
 });
 
+ScrollReveal().reveal(".section__header", {
+  ...scrollRevealOption,
+});
+ScrollReveal().reveal(".section__description", {
+  ...scrollRevealOption,
+});
+
 ScrollReveal().reveal(".bulletin__card", {
   ...scrollRevealOption,
   interval: 500,
@@ -59,9 +66,15 @@ ScrollReveal().reveal(".showcase__btn", {
   delay: 1500,
 });
 
+ScrollReveal().reveal(".swiper", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+
 ScrollReveal().reveal(".banner__card", {
   ...scrollRevealOption,
-  interval: 500,
+  origin: "left",
+  interval: 700,
 });
 
 ScrollReveal().reveal(".incubation__card", {
@@ -70,7 +83,20 @@ ScrollReveal().reveal(".incubation__card", {
 });
 
 const swiper = new Swiper(".swiper", {
-  slidesPerView: 3,
-  spaceBetween: 20,
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: false,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: false,
+  },
   loop: true,
+
+  pagination: {
+    el: ".swiper-pagination",
+  },
 });
